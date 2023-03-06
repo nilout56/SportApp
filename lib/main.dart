@@ -25,21 +25,22 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
      // home: SignIn()
-      home: SplashView(
-          //loadingIndicator: Lottie.asset('assets/images/indicator.zip'),
-        logo: Container(
-          width: 100,
-          height: 100,
-          child: Image.asset('assets/images/LOGOAPP.png')),
-        done: Done(SignIn()),
-       showStatusBar: true,
-       duration: Duration(seconds: 10),
-       //title: Text('ຍິນດີຕ້ອນຮັບ',style: GoogleFonts.notoSansLao(fontSize: 34,fontWeight: FontWeight.bold,color: Color(0xff284F5B)),),
-    //     gradient: LinearGradient(
-    // begin: Alignment.topCenter,
-    // end: Alignment.bottomCenter,
-    // colors: <Color>[Color(0xffF8C141), Colors.white]),
-  ),
+      home: HomeScreen()
+  //      SplashView(
+  //         //loadingIndicator: Lottie.asset('assets/images/indicator.zip'),
+  //       logo: Container(
+  //         width: 100,
+  //         height: 100,
+  //         child: Image.asset('assets/images/LOGOAPP.png')),
+  //       done: Done(SignIn()),
+  //      showStatusBar: true,
+  //      duration: Duration(seconds: 10),
+  //      //title: Text('ຍິນດີຕ້ອນຮັບ',style: GoogleFonts.notoSansLao(fontSize: 34,fontWeight: FontWeight.bold,color: Color(0xff284F5B)),),
+  //   //     gradient: LinearGradient(
+  //   // begin: Alignment.topCenter,
+  //   // end: Alignment.bottomCenter,
+  //   // colors: <Color>[Color(0xffF8C141), Colors.white]),
+  // ),
     );
   }
 }

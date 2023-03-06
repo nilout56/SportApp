@@ -22,6 +22,22 @@ class DetailScreen extends StatefulWidget {
 }
 
 class _DetailScreenState extends State<DetailScreen> {
+  List<Map>sizeshirts=[
+    {
+      "name": "Size S",
+      "name": "Size M",
+      "name": "Size L",
+      "name": "Size XL",
+      "name": "Size 2XL",
+    }
+  ];
+  bool? isChecked = false;
+  bool? isChecked2 = false;
+  bool? isChecked3 = false;
+  bool? isChecked4 = false;
+  bool? isChecked5 = false;
+  bool? isChangecolor = false;
+   bool _isFavorited = false;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -37,7 +53,11 @@ class _DetailScreenState extends State<DetailScreen> {
           //   ),
           // ),
           actions: [
-            IconButton(onPressed: (){}, icon: Icon(Icons.favorite_sharp))
+            IconButton(
+              onPressed:_toggleFavorite, icon: (_isFavorited?Icon(Icons.favorite,color: Colors.red,):Icon(Icons.favorite_border_sharp,)),
+
+            ),
+            
           ],
         ),
         body: SingleChildScrollView(
@@ -46,9 +66,7 @@ class _DetailScreenState extends State<DetailScreen> {
             Container(
                 child: Stack(
               children: [
-                Hero(
-                    tag: widget.disCountModel.imageUrl,
-                    child: Image.asset(widget.disCountModel.imageUrl)),
+                Image.asset(widget.disCountModel.imageUrl),
               ],
             )),
             Padding(
@@ -56,27 +74,160 @@ class _DetailScreenState extends State<DetailScreen> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
-                  Text(widget.disCountModel.type,style: TextStyle(fontSize:20 ,fontWeight: FontWeight.bold),),
+                  Text(widget.disCountModel.type,style: TextStyle(fontSize:18 ,fontWeight: FontWeight.bold),),
                  // SizedBox(width: 40,),
-              Text(widget.disCountModel.description,style: TextStyle(fontSize:20 ,fontWeight: FontWeight.bold,color: Color(0xffF5C003))),
                 ],
               ),
             ),
-            Padding(
-              padding: const EdgeInsets.symmetric(vertical: 0,horizontal: 20),
-              child: Row(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(widget.disCountModel.title,style: TextStyle(fontSize:14 ,fontWeight: FontWeight.bold),),
-                ],
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 20),
+                child: Row(
+                  children: [
+                    Text("ລາຄາ:",style: TextStyle(fontSize:18 ,fontWeight: FontWeight.bold,color: Colors.black)),
+                    SizedBox(width: 10,),
+                    Text("${widget.disCountModel.description}",style: TextStyle(fontSize:18 ,fontWeight: FontWeight.bold,color: Colors.black)),
+                  ],
+                ),
               ),
-            ),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 20),
+                child: Row(
+                  children: [
+                    Column(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: [
+                      Text("ຂະໜາດ:",style: TextStyle(fontSize:18 ,fontWeight: FontWeight.bold),),
+                        Row(
+                          children: [
+                     SizedBox(width: 10,),
+                     Text("Size S",style: TextStyle(fontSize:14 ,fontWeight: FontWeight.bold),),
+                            Checkbox(
+                              
+                              value: isChecked, onChanged: (bool? newValue){
+                              setState(() {
+                                isChecked = newValue;
+                              });
+                              
+                            },
+                            activeColor: Colors.green,
+                            checkColor: Colors.white,
+                            ),
+                          ],
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          children: [
+                     SizedBox(width: 10,),
+                     Text("Size M",style: TextStyle(fontSize:14 ,fontWeight: FontWeight.bold),),
+                            Checkbox(
+                              
+                              value: isChecked2, onChanged: (bool? newValue){
+                              setState(() {
+                                isChecked2 = newValue;
+                              });
+                              
+                            },
+                            activeColor: Colors.green,
+                            checkColor: Colors.white,
+                            ),
+                          ],
+                        ),
+                        Row(
+                          children: [
+                     SizedBox(width: 10,),
+                     Text("Size L",style: TextStyle(fontSize:14 ,fontWeight: FontWeight.bold),),
+                            Checkbox(
+                              
+                              value: isChecked3, onChanged: (bool? newValue){
+                              setState(() {
+                                isChecked3 = newValue;
+                              });
+                              
+                            },
+                            activeColor: Colors.green,
+                            checkColor: Colors.white,
+                            ),
+                          ],
+                        ),
+                    
+               
+                      ],
+                    ),
+
+
+
+                    SizedBox(width: 40,),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(vertical: 10),
+                      child: Column(
+                        
+                        children: [
+                              Row(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                              children: [
+                         Text("Size XL",style: TextStyle(fontSize:14 ,fontWeight: FontWeight.bold),),
+                                Checkbox(
+                                  
+                                  value: isChecked3, onChanged: (bool? newValue){
+                                  setState(() {
+                                    isChecked3 = newValue;
+                                  });
+                                  
+                                },
+                                activeColor: Colors.green,
+                                checkColor: Colors.white,
+                                ),
+                              ],
+                            ),
+                              Row(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                              children: [
+                         Text("Size 2XL",style: TextStyle(fontSize:14 ,fontWeight: FontWeight.bold),),
+                                Checkbox(
+                                  
+                                  value: isChecked3, onChanged: (bool? newValue){
+                                  setState(() {
+                                    isChecked3 = newValue;
+                                  });
+                                  
+                                },
+                                activeColor: Colors.green,
+                                checkColor: Colors.white,
+                                ),
+                              ],
+                            ),
+                              Row(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                              children: [
+                         Text("Size L",style: TextStyle(fontSize:14 ,fontWeight: FontWeight.bold),),
+                                Checkbox(
+                                  
+                                  value: isChecked3, onChanged: (bool? newValue){
+                                  setState(() {
+                                    isChecked3 = newValue;
+                                  });
+                                  
+                                },
+                                activeColor: Colors.green,
+                                checkColor: Colors.white,
+                                ),
+                              ],
+                            ),
+                      ],
+                      ),
+                    )
+                  ],
+                    
+                ),
+              ),
+              SizedBox(height: 20,),
+      
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 20),
               child: Row(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text("ລາຍລະອຽດ",style: TextStyle(fontSize:20 ,fontWeight: FontWeight.bold),),
+                  Text("ລາຍລະອຽດ",style: TextStyle(fontSize:18 ,fontWeight: FontWeight.bold),),
                 ],
               ),
             ),
@@ -84,23 +235,23 @@ class _DetailScreenState extends State<DetailScreen> {
               padding: const EdgeInsets.all(20.0),
               child: Text(widget.disCountModel.details),
             ),
-            GestureDetector(
-              onTap: () {
-                Navigator.push(context, MaterialPageRoute(builder: (_)=>Cart()));
-              },
-              child: Container(
-                width: 370,
-                height: 48,
-                decoration: BoxDecoration(
-                  color: Color(0xffF5C003),
-                  borderRadius: BorderRadius.circular(12)
-                ),
-                child: Center(child: Text("ເພີ່ມສິນຄ້ານີ້້ໃສ່ກະຕ່າ ", style: TextStyle(
-                    fontSize: 20,
-                    fontWeight: FontWeight.bold,
-                    color: Color(0xff284F5B)),)),
-              ),
-            )
+            // GestureDetector(
+            //   onTap: () {
+            //     Navigator.push(context, MaterialPageRoute(builder: (_)=>Cart()));
+            //   },
+            //   child: Container(
+            //     width: 370,
+            //     height: 48,
+            //     decoration: BoxDecoration(
+            //       color: Color(0xffF5C003),
+            //       borderRadius: BorderRadius.circular(12)
+            //     ),
+            //     child: Center(child: Text("ເພີ່ມສິນຄ້ານີ້້ໃສ່ກະຕ່າ ", style: TextStyle(
+            //         fontSize: 20,
+            //         fontWeight: FontWeight.bold,
+            //         color: Color(0xff284F5B)),)),
+            //   ),
+            // )
           ]),
         ),
           bottomNavigationBar: SafeArea(
@@ -114,14 +265,15 @@ class _DetailScreenState extends State<DetailScreen> {
               );
             },
             child: Text(
-              'ຊື້ຕອນນີ້',
+              'ເພີ່ມສິນຄ້າລົງໃນກະຕ່າ',
               style: TextStyle(
                   fontSize: 20,
                   fontWeight: FontWeight.bold,
-                  color: Color(0xff284F5B)),
+                  color: Colors.white),
             ),
             style: TextButton.styleFrom(
-              backgroundColor: Color(0xffF5C003),
+              shadowColor: Colors.black,
+              backgroundColor: Colors.grey,
               minimumSize: Size(double.infinity, 50),
               shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(12)),
@@ -131,4 +283,15 @@ class _DetailScreenState extends State<DetailScreen> {
       ),
         );
   }
+void _toggleFavorite() {
+  setState(() {
+    if (_isFavorited) {
+
+      _isFavorited = false;
+    } else {
+  
+      _isFavorited = true;
+    }
+  });
+}
 }

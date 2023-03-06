@@ -55,7 +55,7 @@ class _DisCountState extends State<DisCount> {
                         Positioned(
                          // bottom: 15.0,
                           child: Container(
-                            height: 300,
+                            height: 320,
                             width: 200.0,
                             decoration: BoxDecoration(
                                 color: Colors.white,
@@ -79,25 +79,25 @@ class _DisCountState extends State<DisCount> {
                             children: [
                             GestureDetector(
                               onTap: ()=>Navigator.of(context).push(MaterialPageRoute(builder: (_)=>DetailScreen(disCountModel: disCountModel,))),
-                              child: Hero(
-                                tag: disCountModel.imageUrl,
-                                child: ClipRRect(
-                                  borderRadius: BorderRadius.circular(10),
-                                  child: Image(
-                                    height: 113.0,
-                                    width: 154.0,
-                                    image: AssetImage(disCountModel.imageUrl),
-                                    fit: BoxFit.cover,
-                                  ),
+                              child: ClipRRect(
+                                borderRadius: BorderRadius.circular(10),
+                                child: Image(
+                                  height: 140.0,
+                                  width: 154.0,
+                                  image: AssetImage(disCountModel.imageUrl),
+                                  fit: BoxFit.cover,
                                 ),
                               ),
                             ),
                             SizedBox(height: 20,),
                              Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
+                              crossAxisAlignment: CrossAxisAlignment.center,
                                children: [
-                                 Text(disCountModel.type,style: TextStyle(fontWeight: FontWeight.bold,overflow: TextOverflow.ellipsis),),
-                             Text(disCountModel.description,style: TextStyle(color: Color(0xffF5C003,),fontSize:18 ),),
+                                 Padding(
+                                   padding: const EdgeInsets.symmetric(horizontal: 20),
+                                   child: Text(disCountModel.type,style: TextStyle(fontWeight: FontWeight.bold,overflow: TextOverflow.ellipsis),),
+                                 ),
+                             Text(disCountModel.description,style: TextStyle(color: Colors.black,fontSize:18 ,fontWeight: FontWeight.bold),),
                                ],
                              ),
                        

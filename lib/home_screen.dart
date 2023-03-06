@@ -110,88 +110,7 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
           ),
           drawer: NavigationDrawer(),
-      // drawer: Drawer(
-        
-      //   shape: RoundedRectangleBorder(
-      //     borderRadius: BorderRadius.circular(10),
-      //   ),
-      //   child: ListView(
-      //     padding: EdgeInsets.zero,
-      //     children: const <Widget>[
-      //       DrawerHeader(
-              
-      //         margin: EdgeInsets.only(bottom: 40),
-      //         padding: EdgeInsets.fromLTRB(20, 10, 0, 0),
-      //         duration: Duration(milliseconds: 250),
-      //         curve: Curves.easeInOut,
-              
-      //         decoration: BoxDecoration(
-      //           color: Colors.black,
-      //         ),
-      //         child: Padding(
-      //           padding: EdgeInsets.symmetric(vertical: 40),
-      //           child: Text(
-      //             'Xaysana KEODUANGDY',
-      //             style: TextStyle(color: Colors.white, fontSize: 18),
-      //           ),
-      //         ),
-      //       ),
-       
-      //       ListTile(
-      //         leading: Icon(
-      //           Icons.login,
-      //        color: Colors.black,
-      //         ),
-      //         title: Text(
-      //           'ເຂົ້າສູ່ລະບົບ',
-      //         ),
-      //       ),
-      //       ListTile(
-      //         leading: Icon(
-      //           Icons.settings,
-      //        color: Colors.black,
-      //         ),
-      //         title: Text('ການຕັ້ງຄ່າ'),
-      //       ),
-      //       ListTile(
-      //         leading: Icon(
-      //           Icons.shopping_cart_checkout_sharp,
-      //        color: Colors.black,
-      //         ),
-      //         title: Text('ກະຕ່າຂອງຂ້ອຍ'),
-      //       ),
-      //       ListTile(
-      //         leading: Icon(
-      //           Icons.favorite_sharp,
-      //     color: Colors.black,
-      //         ),
-      //         title: Text(
-      //           'ລາຍການທີ່ບັນທຶກໄວ້',
-      //         ),
-      //       ),
-     
-      //       ListTile(
-      //         leading: Icon(
-      //           Icons.discount_outlined,
-      //         color: Colors.black,
-      //         ),
-      //         title: Text('ປະຫວັດການສັ່ງຊື້'),
-      //       ),
-      //       ListTile(
-      //         leading: Icon(
-      //           Icons.help_outline_rounded,
-      //          color: Colors.black,
-      //         ),
-      //         title: Text(
-      //           'ອື່ນໆ',
-      //         ),
-      //       ),
-          
-      //     ],
-      //   ),
-      
-          
-      //     ),
+ 
           bottomNavigationBar: AnimatedContainer(
         
         child: BottomAppBar(
@@ -287,7 +206,8 @@ class NavigationDrawer extends StatelessWidget {
           children: [
             CircleAvatar(
               radius: 50,
-              child:  Logo(Logos.firebase),),
+              backgroundImage: AssetImage('assets/images/me.jpeg'),
+              ),
            // Logo(Logos.flutter),
             SizedBox(height: 22),
             Text(
@@ -332,7 +252,7 @@ class NavigationDrawer extends StatelessWidget {
             ),
             leading: const Icon(Icons.settings, color: Colors.white),
             title: const Text(
-              'ແກ້ໄຂ',
+              'ການຕັ້ງຄ່າ',
               style: TextStyle(color: Colors.white),
             ),
             onTap: () {

@@ -107,6 +107,10 @@ flutter:
     - assets/images/xaiyong.jpeg
     - assets/images/lo.jpeg
     - assets/images/qr.jfif
+    - assets/images/homeshirt.jpg
+    - assets/images/away.jpg
+    - assets/images/me.jpeg
+    - assets/images/awayshirt.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
