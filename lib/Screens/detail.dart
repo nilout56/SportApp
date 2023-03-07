@@ -36,6 +36,8 @@ class _DetailScreenState extends State<DetailScreen> {
   bool? isChecked3 = false;
   bool? isChecked4 = false;
   bool? isChecked5 = false;
+  bool? isChecked6 = false;
+  bool? isChecked7 = false;
   bool? isChangecolor = false;
    bool _isFavorited = false;
   @override
@@ -89,6 +91,7 @@ class _DetailScreenState extends State<DetailScreen> {
                   ],
                 ),
               ),
+              SizedBox(height: 10,),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 20),
                 child: Row(
@@ -158,19 +161,20 @@ class _DetailScreenState extends State<DetailScreen> {
 
                     SizedBox(width: 40,),
                     Padding(
-                      padding: const EdgeInsets.symmetric(vertical: 10),
+                      padding: const EdgeInsets.symmetric(horizontal: 50),
                       child: Column(
-                        
+                          mainAxisAlignment: MainAxisAlignment.start,
                         children: [
+                          SizedBox(height: 25,),
                               Row(
-                        mainAxisAlignment: MainAxisAlignment.start,
                               children: [
                          Text("Size XL",style: TextStyle(fontSize:14 ,fontWeight: FontWeight.bold),),
+                          SizedBox(width: 10,),
                                 Checkbox(
                                   
-                                  value: isChecked3, onChanged: (bool? newValue){
+                                  value: isChecked4, onChanged: (bool? newValue){
                                   setState(() {
-                                    isChecked3 = newValue;
+                                    isChecked4 = newValue;
                                   });
                                   
                                 },
@@ -180,14 +184,13 @@ class _DetailScreenState extends State<DetailScreen> {
                               ],
                             ),
                               Row(
-                        mainAxisAlignment: MainAxisAlignment.start,
                               children: [
                          Text("Size 2XL",style: TextStyle(fontSize:14 ,fontWeight: FontWeight.bold),),
                                 Checkbox(
                                   
-                                  value: isChecked3, onChanged: (bool? newValue){
+                                  value: isChecked5, onChanged: (bool? newValue){
                                   setState(() {
-                                    isChecked3 = newValue;
+                                    isChecked5 = newValue;
                                   });
                                   
                                 },
@@ -197,14 +200,14 @@ class _DetailScreenState extends State<DetailScreen> {
                               ],
                             ),
                               Row(
-                        mainAxisAlignment: MainAxisAlignment.start,
                               children: [
                          Text("Size L",style: TextStyle(fontSize:14 ,fontWeight: FontWeight.bold),),
+                          SizedBox(width: 10,),
                                 Checkbox(
                                   
-                                  value: isChecked3, onChanged: (bool? newValue){
+                                  value: isChecked6, onChanged: (bool? newValue){
                                   setState(() {
-                                    isChecked3 = newValue;
+                                    isChecked6 = newValue;
                                   });
                                   
                                 },

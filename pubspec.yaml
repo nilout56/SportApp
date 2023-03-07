@@ -40,6 +40,8 @@ dependencies:
   google_fonts: ^4.0.3
   splash_view: ^2.0.1
   icons_plus: ^4.0.0
+  flutter_snake_navigationbar: ^0.6.1
+  floating_navigation_bar: ^0.0.5
 
 dev_dependencies:
   flutter_test:
@@ -109,8 +111,16 @@ flutter:
     - assets/images/qr.jfif
     - assets/images/homeshirt.jpg
     - assets/images/away.jpg
+    - assets/images/rashfordhomeshirt.jpg
     - assets/images/me.jpeg
     - assets/images/awayshirt.png
+    - assets/images/cloth.jpg
+    - assets/images/cloth1.jpg
+    - assets/images/cloth2.jpg
+    - assets/images/homeshort.jpg
+    - assets/images/iconjersey.jpg
+    - assets/images/blueshirt.jpg
+    - assets/images/robe.jpg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

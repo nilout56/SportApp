@@ -54,17 +54,19 @@ class _ProfileScreenState extends State<ProfileScreen> {
                     Container(
                       child: Align(
                         alignment: Alignment.bottomLeft,
-                        child: CircleAvatar(
-                          backgroundImage: AssetImage(
-                            'assets/images/teacher.jpeg',
+                        child: Center(
+                          child: CircleAvatar(
+                            backgroundImage: AssetImage(
+                              'assets/images/teacher.jpeg',
+                            ),
+                            radius: 50,
+                            child: Padding(
+                                padding: const EdgeInsets.symmetric(
+                                    vertical: 60, horizontal: 60),
+                                child: IconButton(
+                                    onPressed: () {},
+                                    icon: Icon(Icons.add_a_photo))),
                           ),
-                          radius: 50,
-                          child: Padding(
-                              padding: const EdgeInsets.symmetric(
-                                  vertical: 60, horizontal: 60),
-                              child: IconButton(
-                                  onPressed: () {},
-                                  icon: Icon(Icons.add_a_photo))),
                         ),
                       ),
                     ),

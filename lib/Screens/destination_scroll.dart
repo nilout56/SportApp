@@ -83,7 +83,7 @@ class _ProductsState extends State<Products> {
                               child: ClipRRect(
                                 borderRadius: BorderRadius.circular(10),
                                 child: Image(
-                                  height: 113.0,
+                                  height: 140.0,
                                   width: 154.0,
                                   image: AssetImage(destinationModel.imageUrl),
                                   fit: BoxFit.cover,
@@ -92,10 +92,13 @@ class _ProductsState extends State<Products> {
                             ),
                             SizedBox(height: 10,),
                              Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
+                              crossAxisAlignment: CrossAxisAlignment.center,
                                children: [
-                                 Text(destinationModel.type,style: TextStyle(fontWeight: FontWeight.bold),),
-                             Text(destinationModel.description,style: TextStyle(color: Color(0xffF5C003,),fontSize:18 ),),
+                                 Padding(
+                                   padding: const EdgeInsets.symmetric(horizontal: 20),
+                                   child: Text(destinationModel.type,style: TextStyle(fontWeight: FontWeight.bold,overflow: TextOverflow.ellipsis),),
+                                 ),
+                             Text(destinationModel.description,style: TextStyle(color: Colors.black,fontSize:18 ,fontWeight: FontWeight.bold),),
                                ],
                              ),
                        

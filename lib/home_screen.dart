@@ -15,7 +15,7 @@ import 'package:sumang/Screens/discount.dart';
 import 'package:sumang/Search/search_Screen.dart';
 import 'package:sumang/data/menu_items.dart';
 import 'package:sumang/models/menuItem.dart';
-
+import 'package:floating_navigation_bar/floating_navigation_bar.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -110,7 +110,10 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
           ),
           drawer: NavigationDrawer(),
- 
+
+
+    
+
           bottomNavigationBar: AnimatedContainer(
         
         child: BottomAppBar(

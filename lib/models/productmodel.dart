@@ -15,16 +15,16 @@ class ProductsList {
 
 List<ProductsList> productsLists = [
   ProductsList(
-      imageUrl: 'assets/images/image15.jpeg',
-      type: 'Set Serumand skin care ',
+      imageUrl: 'assets/images/robe.jpg',
+      type: 'Robe black ',
       country: 'Laos',
       description: '472.000 LAK',),
 
   ProductsList(
-      imageUrl: 'assets/images/image9.jpeg',
+      imageUrl: 'assets/images/blueshirt.jpg',
       type: 'Nivea Sun ',
       country: 'Laos',
-      description: '65.000 LAK',
+      description: '165.000 LAK',
       ),
   ProductsList(
       imageUrl: 'assets/images/image13.jpeg',
