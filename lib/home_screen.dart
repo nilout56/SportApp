@@ -45,14 +45,7 @@ class _HomeScreenState extends State<HomeScreen> {
              SizedBox(
             width: 10,
           ),
-          Icon(
-            Icons.favorite_border_outlined,
-            color: Colors.black,
-          ),
-              
-          SizedBox(
-            width: 10,
-          ),
+       
         
         ],
         backgroundColor: Colors.white,
