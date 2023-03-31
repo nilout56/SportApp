@@ -180,7 +180,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       color: Color(0xffF5C003),
                       borderRadius: BorderRadius.circular(16)
                     ),
-                    child: Center(child: Text("ເຂົ້າສູ່ລະບົບ",style: GoogleFonts.notoSansLao(fontSize:20,fontWeight: FontWeight.bold,color: Colors.white),))),
+                    child: Center(child: Text("ລົງທະບຽນ",style: GoogleFonts.notoSansLao(fontSize:20,fontWeight: FontWeight.bold,color: Colors.white),))),
                 ),
                 // create text widget to show name and email from textfield
               

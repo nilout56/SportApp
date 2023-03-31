@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:sumang/Profile/about.dart';
+import 'package:sumang/Profile/comment.dart';
 import 'package:sumang/home_screen.dart';
 
 class ProfileScreen extends StatefulWidget {
@@ -18,9 +19,11 @@ class _ProfileScreenState extends State<ProfileScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
+             leading: IconButton(onPressed: (){
+          Navigator.pop(context);
+        }, icon: Icon(Icons.arrow_back,size: 30,color: Colors.blue,)),
             actions: [],
-            title: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 90),
+            title: Center(
               child: Text(
                 "ໂປຣໄຟລ໌",
                 style: TextStyle(
@@ -57,7 +60,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                         child: Center(
                           child: CircleAvatar(
                             backgroundImage: AssetImage(
-                              'assets/images/teacher.jpeg',
+                              'assets/images/me.jpeg',
                             ),
                             radius: 50,
                             child: Padding(
@@ -74,7 +77,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 ),
               ),
               Text(
-                "Dr. Svath Saypadith",
+                "Nilout Stls",
                 style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
               ),
               
@@ -82,59 +85,59 @@ class _ProfileScreenState extends State<ProfileScreen> {
           ),
           scroll(),
         ]),
-        bottomNavigationBar: AnimatedContainer(
+      //   bottomNavigationBar: AnimatedContainer(
         
-        child: BottomAppBar(
-          notchMargin: 8.0,
-          shape: const CircularNotchedRectangle(),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [
-              IconButton(
+      //   child: BottomAppBar(
+      //     notchMargin: 8.0,
+      //     shape: const CircularNotchedRectangle(),
+      //     child: Row(
+      //       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      //       children: [
+      //         IconButton(
                 
-                onPressed: () {
-                   Navigator.push(context,MaterialPageRoute(builder: (_) => HomeScreen()),);
-                },
-                icon: const Icon(
+      //           onPressed: () {
+      //              Navigator.push(context,MaterialPageRoute(builder: (_) => HomeScreen()),);
+      //           },
+      //           icon: const Icon(
                   
-                  Icons.home,
+      //             Icons.home,
                   
-                ),
-              ),
-              IconButton(
-                onPressed: () {
-                 // Navigator.push(context,MaterialPageRoute(builder: (_) => MenuScreen()),);
-                },
-                icon: const Icon(
-                  Icons.search,
-                ),
-              ), 
+      //           ),
+      //         ),
+      //         IconButton(
+      //           onPressed: () {
+      //            // Navigator.push(context,MaterialPageRoute(builder: (_) => MenuScreen()),);
+      //           },
+      //           icon: const Icon(
+      //             Icons.search,
+      //           ),
+      //         ), 
       
-              IconButton(
-                onPressed: () {
-                   //Navigator.push(context,MaterialPageRoute(builder: (_) => CheckoutScreen()),);
-                },
-                icon: const Icon(
-                  Icons.store,
-                ),
-              ),
-              IconButton(
-                onPressed: () {
-                  Navigator.push(context,MaterialPageRoute(builder: (_) => ProfileScreen()),);
-                },
-                icon: const Icon(
-                  CupertinoIcons.person_crop_circle,
-                ),
-              ),
-            ],
-          ),
-        ),
-        duration: const Duration(
-          milliseconds: 800,
-        ),
-        curve: Curves.easeInOutSine,
-        height: showBtmAppBr ? 70 : 0,
-      ),
+      //         IconButton(
+      //           onPressed: () {
+      //              //Navigator.push(context,MaterialPageRoute(builder: (_) => CheckoutScreen()),);
+      //           },
+      //           icon: const Icon(
+      //             Icons.store,
+      //           ),
+      //         ),
+      //         IconButton(
+      //           onPressed: () {
+      //             Navigator.push(context,MaterialPageRoute(builder: (_) => ProfileScreen()),);
+      //           },
+      //           icon: const Icon(
+      //             CupertinoIcons.person_crop_circle,
+      //           ),
+      //         ),
+      //       ],
+      //     ),
+      //   ),
+      //   duration: const Duration(
+      //     milliseconds: 800,
+      //   ),
+      //   curve: Curves.easeInOutSine,
+      //   height: showBtmAppBr ? 70 : 0,
+      // ),
         );
   }
   
@@ -168,6 +171,14 @@ class _ProfileScreenState extends State<ProfileScreen> {
                     controller: scrollController,
                     child: Column(
                       children: [
+                  //          Align(
+                  //   alignment: Alignment.topRight,
+                  //   child: IconButton(
+                  //       icon: Icon(Icons.close,size: 30,),
+                        
+                  //       onPressed: () => Navigator.pop(context),
+                  //     ),
+                  // ),
                         Padding(
                           padding: const EdgeInsets.all(8.0),
                           child: Column(
@@ -192,7 +203,9 @@ class _ProfileScreenState extends State<ProfileScreen> {
                         ),
                         Row(
                           children: [
-                            IconButton(onPressed: (){}, icon: Icon(Icons.discount)),
+                            IconButton(onPressed: (){
+                              Navigator.push(context, MaterialPageRoute(builder: (context)=>CommentsDrag()));
+                            }, icon: Icon(Icons.discount)),
                             Text("ລະຫັດສ່ວນຫຼຸດ",style: TextStyle( fontWeight: FontWeight.bold),),
                           ],
                         ),

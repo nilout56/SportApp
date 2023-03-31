@@ -42,6 +42,11 @@ dependencies:
   icons_plus: ^4.0.0
   flutter_snake_navigationbar: ^0.6.1
   floating_navigation_bar: ^0.0.5
+  country_phone_code_picker: ^0.0.43
+  extended_phone_number_input: ^1.0.2
+  phone_number: ^1.0.0
+  intl_phone_field: ^3.1.0
+  intl_phone_field_plus: ^2.1.2
 
 dev_dependencies:
   flutter_test:
@@ -121,6 +126,11 @@ flutter:
     - assets/images/iconjersey.jpg
     - assets/images/blueshirt.jpg
     - assets/images/robe.jpg
+    - assets/images/devils.jpg
+    - assets/images/Wallpaper2.jpg
+    - assets/images/Wallpaper1.jpg
+    - assets/images/Wallpaper.jpg
+    - assets/images/reddevils.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

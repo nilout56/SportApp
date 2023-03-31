@@ -15,7 +15,6 @@ import 'package:sumang/Screens/discount.dart';
 import 'package:sumang/Search/search_Screen.dart';
 import 'package:sumang/data/menu_items.dart';
 import 'package:sumang/models/menuItem.dart';
-import 'package:floating_navigation_bar/floating_navigation_bar.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -107,59 +106,59 @@ class _HomeScreenState extends State<HomeScreen> {
 
     
 
-          bottomNavigationBar: AnimatedContainer(
+      //     bottomNavigationBar: AnimatedContainer(
         
-        child: BottomAppBar(
-          notchMargin: 8.0,
-          shape: const CircularNotchedRectangle(),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [
-              IconButton(
+      //   child: BottomAppBar(
+      //     notchMargin: 8.0,
+      //     shape: const CircularNotchedRectangle(),
+      //     child: Row(
+      //       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      //       children: [
+      //         IconButton(
                 
-                onPressed: () {
-                   Navigator.push(context,MaterialPageRoute(builder: (_) => HomeScreen()),);
-                },
-                icon: const Icon(
+      //           onPressed: () {
+      //              Navigator.push(context,MaterialPageRoute(builder: (_) => HomeScreen()),);
+      //           },
+      //           icon: const Icon(
                   
-                  Icons.home,
+      //             Icons.home,
                   
-                ),
-              ),
-              IconButton(
-                onPressed: () {
-                  Navigator.push(context,MaterialPageRoute(builder: (_) => SearchScreen()),);
-                },
-                icon: const Icon(
-                  Icons.search,
-                ),
-              ), 
+      //           ),
+      //         ),
+      //         IconButton(
+      //           onPressed: () {
+      //             Navigator.push(context,MaterialPageRoute(builder: (_) => SearchScreen()),);
+      //           },
+      //           icon: const Icon(
+      //             Icons.search,
+      //           ),
+      //         ), 
       
-              IconButton(
-                onPressed: () {
-                   Navigator.push(context,MaterialPageRoute(builder: (_) => AllProductScreen1()),);
-                },
-                icon: const Icon(
-                  Icons.store,
-                ),
-              ),
-              IconButton(
-                onPressed: () {
-                  Navigator.push(context,MaterialPageRoute(builder: (_) => ProfileScreen()),);
-                },
-                icon: const Icon(
-                  CupertinoIcons.person_crop_circle,
-                ),
-              ),
-            ],
-          ),
-        ),
-        duration: const Duration(
-          milliseconds: 800,
-        ),
-        curve: Curves.easeInOutSine,
-        height: showBtmAppBr ? 70 : 0,
-      ),
+      //         IconButton(
+      //           onPressed: () {
+      //              Navigator.push(context,MaterialPageRoute(builder: (_) => AllProductScreen1()),);
+      //           },
+      //           icon: const Icon(
+      //             Icons.store,
+      //           ),
+      //         ),
+      //         IconButton(
+      //           onPressed: () {
+      //             Navigator.push(context,MaterialPageRoute(builder: (_) => ProfileScreen()),);
+      //           },
+      //           icon: const Icon(
+      //             CupertinoIcons.person_crop_circle,
+      //           ),
+      //         ),
+      //       ],
+      //     ),
+      //   ),
+      //   duration: const Duration(
+      //     milliseconds: 800,
+      //   ),
+      //   curve: Curves.easeInOutSine,
+      //   height: showBtmAppBr ? 70 : 0,
+      // ),
     );
    
   }
@@ -235,6 +234,9 @@ class NavigationDrawer extends StatelessWidget {
               style: TextStyle(color: Colors.white),
             ),
             onTap: () {
+              
+                  Navigator.push(context,MaterialPageRoute(builder: (_) => ProfileScreen()),);
+                
              // Navigator.push(
                   // context,
                   // MaterialPageRoute(

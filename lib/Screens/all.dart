@@ -20,6 +20,9 @@ class _AllProductScreen1State extends State<AllProductScreen1> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+           leading: IconButton(onPressed: (){
+          Navigator.pop(context);
+        }, icon: Icon(Icons.arrow_back,size: 30,color: Colors.blue,)),
         title: Text("ສິນຄ້າທັງໝົດ",style: TextStyle(fontWeight: FontWeight.bold)),
       ),
       body: Container(

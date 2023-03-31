@@ -44,6 +44,9 @@ class _DetailScreenState extends State<DetailScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
+             leading: IconButton(onPressed: (){
+          Navigator.pop(context);
+        }, icon: Icon(Icons.arrow_back,size: 30,color: Colors.blue,)),
           title: Center(child: Text('ລາຍລະອຽດ',style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),)),
           // leading: GestureDetector(
           //   onTap: () {

@@ -14,6 +14,9 @@ class AllProGrid extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+           leading: IconButton(onPressed: (){
+          Navigator.pop(context);
+        }, icon: Icon(Icons.arrow_back,size: 30,color: Colors.blue,)),
         title: Text("ລາຍການທີ່ແນະນຳ",style: TextStyle(fontWeight: FontWeight.bold)),
       ),
       body: Padding(
